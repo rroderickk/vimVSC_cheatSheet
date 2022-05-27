@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIMotionVSC - CheatSheet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;400;500;700;900&amp;family=Raleway:ital,wght@0,100;0,400;0,700;1,900&amp;family=Roboto:wght@100;400;900&amp;family=Source+Sans+Pro:wght@200;400;700;900&amp;display=swap" rel="stylesheet">
+  <style>
+    @import url(//db.onlinewebfonts.com/c/2671f4f5fe4b76a27b47d602856cc721?family=MajeritHeadlineMedium);
+
+    * { box-sizing: border-box; font-family: 'MajeritHeadlineMedium'; }
+    canvas{ mix-blend-mode: color-burn;}
+    article > p { font-size: 1.4em; letter-spacing: -.00119rem; font-family: 'Barlow Semi Condensed'; font-weight: 500; }
+    span{ color: crimson; font-weight: bolder; }
+    img{ margin-left: 4px; margin-bottom: 100px; }
+
+    .center{ display: flex; justify-content: center; align-items: center; max-width: 1000px; margin: 0 auto; }
+    ._ref{ margin-top: 40px; margin-left: -40px }
+    ._bor{ padding: 20px; border-radius: 8px; border: 1px solid #ecececf8; width: 100%; }
+
+    @media screen and (max-width: 1000px) {
+      ._ref{ margin-left: 0px }
+        img{ margin-left: 0; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- header title -->
+  <header style=" text-align: center; padding-top: 4px">
+    <h1 style=" color: crimson; line-height: 1;
+      margin: 22px 22px; font-size: 32px;
+      filter: contrast(0.8);
+    "> VimMotionGame - VSCheatsheet </h1>
+    <h4 style=" color: black; 
+      margin-top: -14px;
+    "> h : left &emsp; j : down &emsp; k : up &emsp; l : right &emsp; esc : <span>attack</span> </h4>
+  </header>
+
+
+  <!-- red container div -->
+  <main style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  <div style="position: relative; display: inline-block; margin: 0 40px">
+    <!-- smaller red container div -->
+    <div style=" position: absolute; margin: 0 auto;
+      display: flex; width: 100%; padding: 20px;
+      font-family: 'Press Start 2P', cursive;
+      align-items: center; justify-content: center;
+    ">
+      <!-- player health -->
+      <div style=" position: relative; width: 100%;
+        display: flex; justify-content: flex-end;
+        border-top: 4px solid white;
+        border-left: 4px solid white;
+        border-bottom: 4px solid white;
+      ">
+        <div style="background-color: red; height: 30px; width: 100%"></div>
+        <div id="playerHealth" style=" position: absolute;
+          top: 0; right: 0; bottom: 0; width: 100%;
+          background: #818cf8;
+        "></div>
+      </div>
+
+      <!-- timer -->
+      <div id="timer" style=" background-color: black;
+          width: 100px; height: 50px; flex-shrink: 0;
+          display: flex; align-items: center;
+          justify-content: center; color: white;
+          border: 4px solid white;
+      "> 10 </div>
+      <!-- enemy health -->
+      <div style=" position: relative; width: 100%;
+          border-top: 4px solid white;
+          border-bottom: 4px solid white;
+          border-right: 4px solid white;
+      ">
+        <div style="background-color: red; height: 30px"></div>
+        <div id="enemyHealth" style=" position: absolute;
+          background: #818cf8; top: 0; right: 0;
+          bottom: 0; left: 0;
+        "></div>
+      </div>
+      <div></div>
+    </div>
+    <div id="displayText" style=" position: absolute;
+      color: white; align-items: center; justify-content: center;
+      top: 0; right: 0; bottom: 0;
+      left: 0; display: none;
+    "> Tie </div>
+    <canvas></canvas>
+  </div>
+
+
+
+
+  <!-- @Cheatsheet - Section -->
+  <section style="margin-top: 0px; font-size: 13px; max-width: 900px; width: 100%">
+    <article style="margin-top: 0px;">
+      <h2 style=" color: black">Lo mas difícil de dominar es el movimiento inicial con las teclas 
+        <span>hjkl</span>
+        Una vez lo logras el resto es pan comido....
+      </h2>
+    </article>
+
+    <!--@stage1 -->
+    <article style="margin-top: 100px">
+      
+      <div class="_ref"> - Dominando los movimientos - </div>
+
+      <h2 style="color: black">Combo1: Pasitos de tortuga </h2>
+      <p>Una vez que domines el movimiento tortuga ya estaras listo para empezar a hackear los movimientos y moverte modo liebre, guepardo o gokú teletransportandote.</p>
+      <p style="font-style: oblique; filter: contrast(0.8)">Nota: La idea principal es asociar o referenciar los comandos como &ensp; 
+        <span> dt< </span> &ensp; hacia lo que quieres hacer por medio de la via corta, en este caso en ingles significa: <span>delete until < </span>  &ensp; eliminar hasta < 
+      </p>
+      <p>Así los comandos quedan INTERIORIZADOS para siempre.</p>
+        <img src="./assets/demo_dt_1.gif" alt="demo1"/>
+      <p>Puedes ver lo poderoso que es?, entonces empecemos con los movimientos por palabras, si como su nombre lo dice palabras en ingles <span>words</span> que es diferente a <span> WORDS </span> jejejej si puedes ir haciendote la idea que la velocidad de movimiento cambia si presionamos <span>w</span> o <span>W</span> a su vez si queremos ir hacia atras usamos la <span>b</span> o <span>B</span> que en ingles es <span>back</span></p>
+        <img src="./assets/demo_wb.gif" alt="demo1"/>
+
+      <h2 style="color: black">Combo2: Movimiento horizontal, busqueda</h2>
+      <p>Dentro de la misma linea horizontal puedes avanzar a caracteres especificos con la palabra <span>find</span> osea la tecla <span>f</span> puedo moverme buscando los espacios con el comando <span>f space</span> o retrocediendo <span>F space</span> con eso es suficiente para entender la dinamica. <span>f{caracter}</span> |or| <span> F{caracter}</span>.</p>
+      <p>
+        <span>f.</span> find .<br/>
+        <span>f(</span> find (<br/>
+        <span>f/</span> find / <span>F/</span> Find /<br/>
+      </p>
+        <img src="./assets/demo_f.gif" alt="demof" style="margin: 0"/>
+      <p style="font-style: oblique; filter: contrast(0.8); margin-bottom: 100px">
+        Nota: Siempre hay dos sentidos, infinidad de comandos posibles.
+      </p>
+
+      <h2 style="color: black">Combo3: Inicio y final de linea horizontalmente </h2>
+      <p>
+        <span>0</span> inicio <br/>
+        <span>$</span> final <br/>
+        <span>%</span> Saltar a la coincidencia ({[]}). <br/>
+      </p>
+      <p>Letra Inicial - Letra final en modo insertar </p>
+      <p>
+        <span>I</span> i mayuscula -> Inicio <br/>
+        <span>A</span> Al final <br/>
+      </p>
+        <img src="./assets/demo_jnicio_final.gif" alt="inicio_final" style="margin: 0"/>
+      <p><b>VIMotion</b> tiene tres modos, cursor - insertar - seleccionar 
+      y como todos insertar tene dos sentidos <span>i, I</span> y <span>a A</span>.<br/></p>
+      <p>
+        <span>i</span> tecla i  <br/>
+        <span>a</span> tecla a <br/>
+        <span>o</span> open linea debajo <br/>
+        <span>O</span> Open linea arriba <br/>
+      </p>
+        <img src="./assets/demo_ia.gif" alt="inicio_final" style="margin: 0"/>
+        <p style="margin-bottom: 100px"><b>Felicidades: ya tiene lo suficiente para moverse en modo liebre.</b></p>
+
+
+      <h2 style="color: black">Combo4: Movimiento vertical como guepardo </h2>
+      <p>Fast Movement </p>
+      <p style="font-style: oblique; filter: contrast(0.8)">Nota: aqui ya eres libre de decidir como relacionar las teclas con tu forma de pensar </p>
+      <p>
+        <span>( )</span> fast vertical movement  <br/>
+        <span>{ }</span> fast vertical movement <br/>
+      </p>
+        <img src="./assets/guepardo.gif" alt="inicio_final" />
+
+
+
+      <h2 style="color: black">Combo5: Movimientos verticales de alta precisión con patrón de búsqueda </h2>
+      <p>Busqueda hacia arriba o hacia abajo</p>
+      <p>
+        <span>/{palabra a buscar hacia abajo}</span> Ejemplo: /Nota  <br/>
+        <span>?{palabra a buscar hacia arriba}</span> Ejemplo: ?Busqueda <br/>
+        <span>n</span> next, siguiente ocurrencia de busqueda <br/>
+        <span>N</span> next, anterior ocurrencia de busqueda <br/>
+      </p>
+      <p>Busqueda hacia arriba o hacia abajo</p>
+        <img src="./assets/busqueda.gif" alt="inicio_final" style="margin-bottom: 0"/>
+        <img src="./assets/busquedaN.gif" alt="N" style="margin-bottom: 100px"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="_ref"> - Teletransporte como kakaroto - </div>
+      <h2 style="color: black">T1: linea 0 -> cualquier linea - verticalmente</h2>
+      <p>
+        <!-- gg -->
+        <span>gg</span> gugol gugol,te lleva a la linea cero o inicio del documento <br/>
+        <span>G</span> al final <br/>
+        <span>gg{numero_de_linea}G</span> linea exacta <br/>
+        <span>gg100gg</span> tambien funciona y te lleva a la linea 100 <br/>
+        <span>gg50enter</span> lo mismo -> linea 50 <br/>
+        <span>ggdG</span> <b>Elimina todo el documento </b> 
+      </p>
+        <img src="./assets/gg.gif" alt="inicio_final" /><br/>
+
+      <!-- //todo gd go definition -->
+      <h2 style="color: black">T2: Movimiento 3d </h2>
+      <p>
+        <span><b>gd</b></span> Go to definition <span>de mis favoritos y mas usados</span><br/>
+        <span>alt + ArrowLeft</span> Devolver<br/>
+        <br/>
+        <img src="./assets/gd.gif" alt="inicio_final" style="margin: 0"/><br/>
+        <br/>
+        <span>gf</span> Get file<br/>
+        <br/>
+        <img src="./assets/gf.gif" alt="inicio_final" />
+      </p>
+
+
+
+
+      <!-- fatalities control del texto -->
+      <h2 style="color: black">Editando texto: Modo hardcore</h2>
+      <p>
+        <span><b>dd</b></span> Elimina toda la linea -delete-<br/>
+        <span>yy</span> Copia toda la linea -yank-<br/>
+        <span>p</span> Pegar <span>Paste</span><br/>
+        <span>v</span> Modo seleccionar<br/>
+        <span>Esc</span> Para escapar de la mayoria de los comandos y te situa en modo movimiento - cursor<br/>
+      </p>
+      <img src="./assets/dd.gif" alt="dd" /><br/>
+
+
+
+      <!-- dw | de -->
+      <h2 style="color: black">Editando texto: Modo hardcore</h2>
+      <p>
+        <span><b>de</b></span> Eliminando palabras<br/>
+        <span><b>dt space</b></span> Eliminando hasta el espacio<br/>
+        <span><b>dt / </b></span> Elimina hasta el /<br/>
+        <span><b>dt ' </b></span> Elimina hasta la '<br/>
+        <span>db</span> delete en sentido contrario delete back<br/>
+      </p>
+      <img src="./assets/dw.gif" alt="dw"/><br/>
+
+      <!-- multiplicadores d2w | de -->
+      <h2 style="color: black">Multiplicadores</h2>
+      <p>
+        <span>4dj</span> Delete 4 lineas hacia abajo <br/>
+        <span>4yk</span> yank 4 lineas hacia arriba<br/>
+        <span>d1000enter</span> delete 1000 lineas <br/>
+        <span>10000dd</span> 10000 lineas delete<br/>
+        <span>10000yy</span> 10000 lineas yank -copy-<br/>
+      </p>
+      <img src="./assets/multiplicador.gif" alt="multiplicador"/><br/>
+
+      <!-- replicador .  -->
+      <h2 style="color: black"> Replicador</h2>
+      <p>
+        <span>.</span> con la tecla punto replica último cambio<br/>
+        <img src="./assets/replicador.gif" alt="replicador"/><br/>
+      </p>
+
+
+      <!-- R -->
+      <h2 style="color: black">Replace</h2>
+      <p>
+        <span>r </span> Reemplaza el caracter debajo del cursor<br/>
+        <span>R </span> Modo reemplazar<br/>
+        <img src="./assets/reemplazar.gif" alt="reemplazar"/><br/>
+      </p>
+
+
+      <!-- s -->
+      <h2 style="color: black">Substitusion</h2>
+      <p>
+        <span>s </span> Substituye el caracter debajo del cursor<br/>
+        <span>S </span> Substituir toda la linea<br/>
+        <span>D </span> Delete resto de linea<br/>
+        <img src="./assets/substituir.gif" alt="substituir"/><br/>
+      </p>
+
+      <!-- deshacer u -->
+      <p>
+        <span>u </span>Undo -deshacer- <br/>
+        <span>ctrl z </span>Undo<br/>
+        <span>ctrl r </span>Rehacer<br/>
+        <span>ctrl shif z </span>Rehacer<br/>
+      </p>
+
+
+      <!-- :w  -->
+      <p>
+        <span>:wq </span>write quit -guardar salir- <br/>
+        <span>:wq! </span>write quit forzar <br/>
+        <span>:q! </span>force quit<br/>
+        <span>esc ZZ</span>Mi favorita la salida del zorro<br/>
+      </p>
+
+      <!-- %s/w/s/g  -->
+      <h2 style="color: black">Substitusion en todo el documento</h2>
+      <p>
+        <span>%s/w/s/g</span>%s sustitucion /word a substituir /substucion /g aplica los cambios<br/>
+        <span>%s/"/'/g</span>Ejemplo: substituye todas las comillas dobles por comilla simple<br/>
+      </p>
+
+      <!-- navego entre ventanas -->
+      <h2 style="color: black">Navegacion en pestañas o grupo</h2>
+      <p>
+        <span>alt {2}</span>alt numero de pestaña<br/>
+        <span>ctrl {2}</span>ctrl numero del grupo de pestaña<br/>
+      </p>
+
+      <!-- vsc auto-guardado -->
+      <h2 style="color: black">Autoguardado</h2>
+      <p>
+        <span>ctrl ,</span>ctrl , abre settings de VSC y en el primer apartado AutoSave escoger <span>afterDelay</span><br/>
+      </p>
+
+      <!-- vsc emmet -->
+      <h2 style="color: black">Emmet: wrap</h2>
+      <p>
+        <span>f1 wrap enter + name</span>wrap with etiqueta<br/>
+      </p>
+
+      <!-- vsc motion -->
+      <h2 style="color: black">VIM: motion</h2>
+      <p>
+        <span>space space motion  objetivo</span> si tienes habilitada esta opcion con la combinacion de teclas 2 veces espacio y una direccion jklm entras en modo leader VSC te resaltara las opciones precisas a donde quieres ir<br/>
+        <span>space space k ,</span> space space arriba y al objetivo , me situara allí<br/>
+      </p>
+
+    </article>
+  </section>
+  </main>
+
+  <!-- =(@f)=> footer -->
+  <footer class="center" style="margin-top: 120px;margin-bottom: 10px; display: block;">
+    <h2 style="color: #400c60">Por supuesto la destreza se adquiere practicando con el poco tiempo veras como tu cerebro crea las conexiones necesarias para que tus manos hagan lo que tu desees sin pensarlo, por supuesto nadie es 100% perfecto...</h2><br/>
+    <h4> Si quieres aprender a hacer juegos como este te recomiendo este video:
+      <a href="https://www.youtube.com/watch?v=vyqbNFMDRGQ" target="_blank">
+        JavaScript Fighting Game Tutorial with HTML Canvas
+      </a> de este canal:
+      <a href="https://www.youtube.com/c/ChrisCourses" target="_blank">
+        Chris Courses </a>
+    </h2>
+    <a href="https://github.com/rroderickk" target="_blank" style="text-decoration: none;">
+      <h3 style="text-align: center; margin: 60px 0 80px">
+        <div style="height: 40px"></div>
+        <img src="./assets/iam.jpg" alt="cheat" 
+          style=" border-radius: 50%;
+            width: 90px;
+            height: 100px;
+            overflow: hidden;
+            margin-bottom: 0;
+        "/>
+        <br/>by CheatModes4 - rroderickk </h3>
+    </a>
+  </footer>
+
+  <!-- scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+    integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"
+  ></script>
+  <script src="js/utils.js"></script>
+  <script src="js/classes.js"></script>
+  <script src="index.js"></script>
+</body>
