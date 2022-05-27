@@ -128,7 +128,10 @@ function animate() {
   
   else { player.switchSprite('idle') }
 
-  /* Player teletransport */
+  /** 
+   * Player teletransport like
+   * @VIM keys A, I
+   * */
   if (keys.A.pressed && player.lastKey === 'A') {
     player.position.x = 920;
   }
@@ -171,7 +174,7 @@ function animate() {
     player.isAttacking &&
     player.framesCurrent === 4
   ) {
-    enemy.takeHit()
+    enemy.takeHit(4)
     player.isAttacking = false
 
     gsap.to('#enemyHealth', {
@@ -193,7 +196,7 @@ function animate() {
     enemy.isAttacking &&
     enemy.framesCurrent === 2
   ) {
-    player.takeHit()
+    player.takeHit(9)
     enemy.isAttacking = false
 
     gsap.to('#playerHealth', {
