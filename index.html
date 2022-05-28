@@ -13,7 +13,6 @@
     @import url(//db.onlinewebfonts.com/c/2671f4f5fe4b76a27b47d602856cc721?family=MajeritHeadlineMedium);
 
     * { box-sizing: border-box; font-family: 'MajeritHeadlineMedium'; }
-    canvas{ mix-blend-mode: color-burn;}
     article > p { font-size: 1.4em; letter-spacing: -.00119rem; font-family: 'Barlow Semi Condensed'; font-weight: 500; }
     span{ color: crimson; font-weight: bolder; }
     img{ margin-left: 4px; margin-bottom: 100px; }
@@ -105,7 +104,8 @@
         <span>h j k l</span> <i style="filter: contrast(0.3); font-weight: 500;">-Para es este juego-</i>
         Una vez lo logras el resto es <b style="font-weight: 900">PAN COMIDO</b>....
       </h2>
-      <small>Por supuesto hay otros movimientos añadidos que descubriras leyendo este post</small>
+      <small style="font-size: 17px;">Por supuesto hay otros movimientos añadidos que descubriras leyendo este post</small><br/>
+      <small style="font-size: 17px;">El unico requerimiento es tener instalada la extension VIM on VSC</small>
     </article>
 
     <!--@stage1 -->
@@ -151,14 +151,14 @@
 
       <h2 style="color: black">Combo3: Inicio y final de linea horizontalmente </h2>
       <p>
-        <span>0</span> inicio <br/>
-        <span>$</span> final <br/>
+        <span>0</span> inicio de linea <br/>
+        <span>$</span> final de linea <br/>
         <span>%</span> Saltar a la coincidencia ({[]}). <br/>
       </p>
       <p>Letra Inicial - Letra final en modo insertar </p>
       <p>
-        <span>I</span> i mayuscula -> Inicio <br/>
-        <span>A</span> Al final <br/>
+        <span>I</span> i mayuscula -> Insertar al Inicio <br/>
+        <span>A</span> insertar Al final <br/>
       </p>
         <img src="./assets/demo_jnicio_final.gif" alt="inicio_final" style="margin: 0"/>
       <p><b>VIMotion</b> tiene tres modos, cursor - insertar - seleccionar 
@@ -391,11 +391,25 @@
 
 
       <!-- vsc emmet -->
-      <h2 style="color: black">Emmet: wrap</h2>
+      <h2 style="color: black"> Emmet: wrap</h2>
       <p>
-        <span>f1 wrap enter + name</span>wrap with etiqueta<br/>
+        <span>f1 wrap enter + name </span> wrap with etiqueta<br/>
       </p>
         <img src="./assets/emmet.gif" alt="emmet"/><br/>
+
+
+
+      <div class="_divider"></div>
+
+
+      <h2 style="color: black">Indentacion</h2>
+      <p>
+        <span style="font-size: 22px;"> > </span> -> Empuja hacia la derecha <br/>
+        <span style="font-size: 22px;"> < </span> <- Empuja hacia la izquierda<br/>
+        <span style="font-size: 22px;"> <. </span> <- Empuja hacia la izquierda y replica<br/>
+      </p>
+        <img src="./assets/indentacion.gif" alt="indentacion" style="max-width: 770px";/><br/>
+
     </article>
 
 
@@ -410,7 +424,7 @@
     <article class="_bor">
       <h2 style="color: black">VIM: motion</h2>
       <p>
-        <span>space space motion  objetivo</span> si tienes habilitada esta opcion con la combinacion de teclas 2 veces espacio y una direccion jklm entras en modo leader VSC te resaltara las opciones precisas a donde quieres ir<br/>
+        <span>space space motion  objetivo</span> Si tienes habilitada esta opcion con la combinacion de teclas 2 veces espacio y una direccion jklm entras en modo leader VSC te resaltara las opciones precisas a donde quieres ir<br/>
         <span>space space u ,</span> space space arriba y al objetivo , me situara allí<br/>
       </p>
         <img src="./assets/motion.gif" alt=""/><br/>
@@ -424,8 +438,8 @@
       <!-- navego entre ventanas -->
       <h2 style="color: black">Navegacion en pestañas o grupo</h2>
       <p>
-        <span>alt 2</span>alt numero de pestaña<br/>
-        <span>ctrl 2</span>ctrl numero del grupo de pestaña<br/>
+        <span>alt 2 </span> Alt numero de pestaña<br/>
+        <span>ctrl 2 </span> Ctrl numero del grupo de pestaña<br/>
       </p>
         <img src="./assets/pestañas.gif" alt="pestañas"/><br/>
 

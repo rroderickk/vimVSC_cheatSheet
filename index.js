@@ -196,7 +196,7 @@ function animate() {
     enemy.isAttacking &&
     enemy.framesCurrent === 2
   ) {
-    player.takeHit(9)
+    player.takeHit(9) //*<--   ;) damage
     enemy.isAttacking = false
 
     gsap.to('#playerHealth', {
